@@ -1,0 +1,28 @@
+create database database_name;
+
+CREATE DATABASE sep14;
+----------------------------------------------------------------------------------
+create table table_name(
+id int(size) ,
+name varchar(size),
+surname varchar(size),
+email varchar(size)
+);
+-------------------------------------------or------------------------------------
+
+CREATE TABLE Students1(
+id int(255),
+    name varchar(300),
+    surname varchar(300),
+    email varchar(300)
+);
+--------------------------------------------------or----------------------------------
+
+
+USE sep14;
+CREATE TABLE Jaydeep(
+id int(255),
+    name varchar(300),
+    surname varchar(300),
+    email varchar(300)
+);
