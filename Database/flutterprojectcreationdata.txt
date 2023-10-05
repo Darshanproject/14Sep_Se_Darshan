@@ -1,0 +1,38 @@
+ Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                ElevatedButton(onPressed: (){
+                  createData();
+                }, child:Text("Create"),style: ElevatedButton.styleFrom(backgroundColor: Colors.green), ),
+                 ElevatedButton(onPressed: (){
+                  updateData();
+                 }, child:Text("Update"),style: ElevatedButton.styleFrom(backgroundColor: Colors.purple), ),
+                  ElevatedButton(onPressed: (){
+                    deleteData();
+                  }, child:Text("Delete"),style: ElevatedButton.styleFrom(backgroundColor: Colors.red), ),
+                   ElevatedButton(onPressed: (){
+                    showData();
+                   }, child:Text("Show"),style: ElevatedButton.styleFrom(backgroundColor: Colors.yellow), )
+              ],
+            )
+
+
+
+
+
+
+ documentReference.get().then((datasnapshot) {
+  if (datasnapshot.exists) {
+    final studentName = datasnapshot.data?["studentName"];
+    final studentID = datasnapshot.data?["studentID"];
+    final studyProgramID = datasnapshot.data?["studyProgramID"];
+    final studentGPA = datasnapshot.data?["studentGPA"];
+
+    print(studentName);
+    print(studentID);
+    print(studyProgramID);
+    print(studentGPA);
+  } else {
+    print("Document does not exist.");
+  }
+});

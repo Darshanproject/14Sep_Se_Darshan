@@ -26,3 +26,44 @@ id int(255),
     surname varchar(300),
     email varchar(300)
 );
+-----------------------------------------------------------------------------------------
+insert into table_name (column_name) values (data);
+INSERT INTO student(id,name,surname,email) VALUES(1,"Harsh","Savala","harsh@gamil.com");
+
+
+
+INSERT INTO student(id,name,surname,email) VALUES(2,"Mihir","Savala","mihir@gamil.com");
+INSERT INTO student(id,name,surname,email) VALUES(3,"Akshil","Chandria","Akshil@gamil.com");
+INSERT INTO student(id,name,surname,email) VALUES(4,"Darshan","Gada","Gada@gamil.com");
+
+
+
+INSERT INTO student(id,name,surname,email) VALUES(5,"Mihir","panchal","mihir@gamil.com"),(6,"Mihir","Shah","mihir@gamil.com");
+
+
+
+alter table table_name column_name modife,set,drop column_name datatype ;
+
+ALTER TABLE student MODIFY id int PRIMARY KEY AUTO_INCREMENT NOT NULL;
+
+
+update table table_name set column_name where column_name condtion
+
+
+UPDATE student  SET id=8 WHERE id=14;
+
+
+alter table table_name add column_name datatype size;
+
+ALTER TABLE student ADD mobile bigint(10);
+
+
+update student SET mobile=9512714369 WHERE name="Darshan";
+
+
+alter table table drop column_name
+
+ALTER TABLE student DROP mobile;
+
+
+ 
