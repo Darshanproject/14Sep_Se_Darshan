@@ -65,5 +65,39 @@ alter table table drop column_name
 
 ALTER TABLE student DROP mobile;
 
+Date 07-10-2023
 
- 
+ TRUNCATE student;
+
+  DROP TABLE student;
+
+
+CREATE TABLE students(
+	id int PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    name varchar (300),
+    Surname varchar(300),
+    email varchar (300),
+    mobile bigint(10),
+	salary bigint(40)
+);
+
+
+
+INSERT INTO `students` (`id`, `name`, `Surname`, `email`, `mobile`, `salary`)
+ VALUES (NULL, 'Dhara', 'Patel', 'dhara@gmail.com', '5645457454', '250000'), 
+(NULL, 'Jaydeep', 'Patel', 'jaydeep@gamil.com', '89725147210', '45000'), 
+(NULL, 'deep', 'soni', 'deep@gamil.com', '0254655154', '550000'), 
+(NULL, 'Anjali', 'Tekchandani', 'anjali@gamil.com', '5645424651', '780000');
+
+
+CREATE TABLE Office(
+	id  int PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    name varchar(50),
+	dept varchar(20),
+	F_key int NOT Null,
+    FOREIGN KEY (F_key) REFERENCES students(id)
+);
+
+
+INSERT INTO office (name,dept,F_key) VALUES ("Anjali","HR",4),
+("Dhara","DA",1),("Jaydeep","Developer",2),("Deep","BackEnd Developer",3);
