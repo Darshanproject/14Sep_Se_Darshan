@@ -1,0 +1,17 @@
+CREATE TABLE salary( id int PRIMARY KEY AUTO_INCREMENT NOT NULL, Dept varchar(30), F_key int NOT NULL, FOREIGN KEY (F_key) 
+REFERENCES office(id) );
+
+INSERT INTO `salary` (`id`, `Dept`, `F_key`) VALUES (NULL, 'HR', '4'), (NULL, 'developer', '2'), (NULL, 'Sales', '5'),
+ (NULL, 'Nurse', '3');
+
+SELECT office.name, salary.Dept FROM office INNER JOIN salary ON
+office.id = salary.F_key
+
+
+CREATE TABLE Actor(
+id int PRIMARY KEY NOT NUll,
+    name varchar(20) not null,
+    age int(20) not null,
+	f_key int NOT null,
+	FOREIGN KEY (f_key) REFERENCES movie(id)
+);
