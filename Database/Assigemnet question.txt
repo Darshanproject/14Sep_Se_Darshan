@@ -1,0 +1,71 @@
+SELECT First_Name
+FROM Employee
+WHERE Employee_Name = 'Tom';
+
+SELECT FIRST_NAME, Joining_Date, Salary
+FROM Employee;
+
+
+SELECT *
+FROM Employee
+ORDER BY First_Name ASC, Salary DESC;
+
+
+SELECT *
+FROM Employee
+WHERE First_Name LIKE '%J%';
+
+
+SELECT Department, MAX(Salary) AS Max_Salary
+FROM Employee
+GROUP BY Department
+ORDER BY Max_Salary DESC;
+
+
+
+SELECT e.first_name, i.incentive_amount
+FROM employee e
+JOIN incentives i ON e.employee_id = i.employee_id
+WHERE i.incentive_amount > 3000;
+
+
+
+DELIMITER 
+CREATE TRIGGER after_employee_insert
+AFTER INSERT
+ON Employee FOR EACH ROW
+BEGIN
+
+  INSERT INTO viewtable (employee_id, first_name, last_name, other_columns)
+  VALUES (NEW.employee_id, NEW.first_name, NEW.last_name, NEW.other_columns);
+END;
+
+DELIMITER ;
+
+
+SELECT *
+FROM Orders
+WHERE total_amount > 1000;
+
+
+SELECT Name, City
+FROM Salespeople
+WHERE City = 'London' AND Commission > 0.12;
+
+
+SELECT *
+FROM Salespeople
+WHERE City IN ('Barcelona', 'London');
+
+
+SELECT *
+FROM Salespeople
+WHERE Commission > 0.10 AND Commission < 0.12;
+
+
+SELECT *
+FROM Customers
+WHERE Rating > 100 OR Location = 'Rome';
+
+
+
