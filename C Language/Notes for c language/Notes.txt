@@ -1,0 +1,25 @@
+1) Arthicmate
+   + - * / %
+2) logical 
+   && || !=
+3) realational
+   > < >= <= ==
+4) tarnary or condtional 
+   Syntax: 
+	(Condtion)?exp1:exp2;
+5) betwise
+   ^ ~
+6) special 
+   , &  *  Sizeof()
+7) increment or decrement
+   ++ --
+8) Assigment
+  =
+  shorthand 
+   += -= *= /=   
+
+
+
+
+ans=num+num1;
+num+=num1;
