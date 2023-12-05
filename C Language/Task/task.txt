@@ -1,0 +1,5 @@
+take input from user 10 numbers 
+check that which numbers are even an odd
+seprate them in 2 different arrays 
+and show which numbers are even and which are odd
+counter
