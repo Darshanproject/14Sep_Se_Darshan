@@ -1,0 +1,7 @@
+Friend Function
+templetes
+loops doubt
+private class
+protected
+file handling
+pass array through class

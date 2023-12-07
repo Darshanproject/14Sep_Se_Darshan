@@ -1,0 +1,12 @@
+• DDL
+• DML
+• TCL
+• TQL
+• Primary key
+• foreign key
+• SQL Statements Types
+• Function
+• What are Joins
+• Types of Joins
+• Procedure
+• Trigger
